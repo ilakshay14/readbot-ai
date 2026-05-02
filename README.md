@@ -35,7 +35,7 @@ The digest looks like this in your inbox:
 ## Setup
 
 ```bash
-npx readbot init
+npx readbot-ai init
 ```
 
 The wizard will:
@@ -110,7 +110,7 @@ readbot uninstall
 
 ReadBot's command files are prompts. When you run `/wake-up`, your AI tool:
 
-1. Runs `himalaya envelope list --query "flag:unseen"` to find unread emails
+1. Runs `himalaya envelope list not flag seen` to find unread emails
 2. Reads each email with `himalaya message read <id>`
 3. Uses its own LLM to triage everything into three buckets
 4. Builds an HTML email and sends it via `himalaya message send`
